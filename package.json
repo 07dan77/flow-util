@@ -1,0 +1,19 @@
+{
+  "name": "flow-pauser",
+  "version": "1.0.0",
+  "description": "Pauses flows",
+  "main": "command.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octoblu/flow-pauser.git"
+  },
+  "author": "Octoblu Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/flow-pauser/issues"
+  },
+  "homepage": "https://github.com/octoblu/flow-pauser#readme"
+}
