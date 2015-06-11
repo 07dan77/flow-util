@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+deploy:
+  provider: npm
+  email: serveradmin@octoblu.com
+  api_key:
+    secure: ukpH4K21cufmS3kBzrWCvRDfXL2KE5X7Rpr5kxZinkmeXLOH1wOgVcGcPckcET96leyLM/5rDDJmHdUM8/IsekShjnjj7667M5t2Ggnd9eBWbtbWK/OQYYOoWZ5Rkz1feZKGZAeb3JRV+ZQSa923m5hC4HxdsAEXwxJpoiDg1cIB5qYT3uZPd7eMYp3OQis+JPSX7+JaurQsGiC3LbCSA0qGIOJc3fMN6612oS7m33wiz4jj5o1ZqOwp3WII0NcjXnVtRrNAyh/4oqV3CgNAqj2mWR4aqoK8HwEp0zUdrOzBT4dlirRdecG1Wb6QmTrlQYc/S0EZ0sEZSqfBvU9aC25CNrUieFg4WRlOMICrIVVeFNG+DxCYuD9slVpV1m6u8GQzGDjAtl6kvADArf09h7Dl2BULiS8fr1EdxobaYH85C57UDHNCLi+/GtzunDprrivri9i9KjMOHiO8cFzO/WBrz9OemLb/gxfhGQ5KyhqG/vpyVVlE5Aa8Wy21wzo44vOsEy98nTgwjrIB+iBWofjJ54DAHKGQu07wQFmfEhO+m5qu6gaIads5+9uYounn4JPZiqMPCzl2q5u4cJVebXHlgCnDww7PI2EeMkIe1qDS4vxbdk7ZGYUAYwge+F4f8YqSoeRWkgNgdAZq951f3qWEsf6wBA0NNDjWBjO7M6Y=
+  on:
+    tags: true
+    repo: octoblu/flow-util
