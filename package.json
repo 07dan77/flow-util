@@ -1,7 +1,7 @@
 {
-  "name": "flow-pauser",
+  "name": "flow-util",
   "version": "1.0.0",
-  "description": "Pauses flows",
+  "description": "Utils flows",
   "main": "command.js",
   "scripts": {
     "test": "mocha"
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/octoblu/flow-pauser/issues"
   },
-  "homepage": "https://github.com/octoblu/flow-pauser#readme"
+  "homepage": "https://github.com/octoblu/flow-pauser#readme",
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "commander": "^2.8.1",
+    "request": "^2.57.0"
+  }
 }
