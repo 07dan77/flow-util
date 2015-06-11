@@ -7,7 +7,7 @@ class CommandResume
   parseOptions: =>
     commander
       .usage '[options] [path/to/meshblu.json]'
-      .description 'uses MESHBLU_UUID and MESHBLU_TOKEN from the environment'
+      .description 'config parameters may optionally be provided by the environment'
       .parse process.argv
 
     @filename = commander.args[0]
@@ -27,7 +27,6 @@ class CommandResume
     request.post url, requestOptions, (error, response, body) =>
       return @printErrorAndDie error if error?
       return @printErrorAndDie new Error(body.error) if response.statusCode != 201
-      console.log JSON.stringify(body, null, 2)
 
   printErrorAndDie: (error) =>
     console.error error.message
