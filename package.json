@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Utils flows",
   "main": "command.js",
+  "bin": {
+    "flow-util": "./command.js",
+    "flow-util-savepause": "./command-savepause.js",
+    "flow-util-resume": "./command-resume.js"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -19,6 +24,8 @@
   "dependencies": {
     "coffee-script": "^1.9.3",
     "commander": "^2.8.1",
-    "request": "^2.57.0"
+    "meshblu-config": "^2.0.0",
+    "request": "^2.57.0",
+    "uuid": "^2.0.1"
   }
 }
