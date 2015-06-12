@@ -1,10 +1,12 @@
 {
   "name": "flow-util",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utils flows",
   "main": "command.js",
   "bin": {
     "flow-util": "./command.js",
+    "flow-util-pause": "./command-pause.js",
+    "flow-util-save": "./command-save.js",
     "flow-util-savepause": "./command-savepause.js",
     "flow-util-resume": "./command-resume.js"
   },

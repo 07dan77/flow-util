@@ -5,8 +5,10 @@ class Command
   run: =>
     commander
       .version packageJSON.version
-      .command 'resume',    'resume a flows'
-      .command 'savepause', 'pause and save a flow'
+      .command 'pause',     'pause a flow'
+      .command 'resume',    'resume a flow'
+      .command 'save',     'save flow state'
+      .command 'savepause', 'pause and save flow state'
       .parse process.argv
 
     unless commander.runningCommand
