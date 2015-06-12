@@ -28,11 +28,16 @@ class CommandSavePause
 
     request.post url, requestOptions, (error, response, body) =>
       return @printErrorAndDie error if error?
-      return @printErrorAndDie new Error(body.error) if response.statusCode != 201
+      return @printAndDie body if response.statusCode != 201
 
   printErrorAndDie: (error) =>
     console.error error.message
     console.error error.stack if error.stack?
     process.exit 1
+
+  printAndDie: (something) =>
+    JSON.stringify something, null, 2
+    process.exit 1
+
 
 module.exports = CommandSavePause
