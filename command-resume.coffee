@@ -3,6 +3,8 @@ MeshbluConfig = require 'meshblu-config'
 path          = require 'path'
 request       = require 'request'
 
+FLOW_DEPLOY_SERVICE_BASE_URI = process.env.FLOW_DEPLOY_SERVICE_BASE_URI ? 'https://flow-deploy.octoblu.com'
+
 class CommandResume
   parseOptions: =>
     commander
@@ -18,7 +20,7 @@ class CommandResume
     meshblu = new MeshbluConfig filename: @filename
     config = meshblu.toJSON()
 
-    url = "https://flow-deploy.octoblu.com/flows/#{config.uuid}/instance/resume"
+    url = "#{FLOW_DEPLOY_SERVICE_BASE_URI}/flows/#{config.uuid}/instance/resume"
     requestOptions =
       auth:
         user: config.uuid

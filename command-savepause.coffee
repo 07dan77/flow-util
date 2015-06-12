@@ -4,6 +4,8 @@ path          = require 'path'
 request       = require 'request'
 uuid          = require 'uuid'
 
+FLOW_DEPLOY_SERVICE_BASE_URI = process.env.FLOW_DEPLOY_SERVICE_BASE_URI ? 'https://flow-deploy.octoblu.com'
+
 class CommandSavePause
   parseOptions: =>
     commander
@@ -19,7 +21,7 @@ class CommandSavePause
     meshblu = new MeshbluConfig filename: @filename
     config = meshblu.toJSON()
 
-    url = "https://flow-deploy.octoblu.com/flows/#{config.uuid}/instance/save-pause/#{uuid.v1()}"
+    url = "#{FLOW_DEPLOY_SERVICE_BASE_URI}/flows/#{config.uuid}/instance/save-pause/#{uuid.v1()}"
     requestOptions =
       json: true
       auth:
@@ -36,7 +38,7 @@ class CommandSavePause
     process.exit 1
 
   printAndDie: (something) =>
-    JSON.stringify something, null, 2
+    console.error JSON.stringify(something, null, 2)
     process.exit 1
 
 
