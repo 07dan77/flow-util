@@ -21,6 +21,7 @@ class CommandSavePause
 
     url = "https://flow-deploy.octoblu.com/flows/#{config.uuid}/instance/save-pause/#{uuid.v1()}"
     requestOptions =
+      json: true
       auth:
         user: config.uuid
         pass: config.token
