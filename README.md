@@ -4,12 +4,12 @@ Interact with your Octoblu Flow
 [![Build Status](https://travis-ci.org/octoblu/flow-util.svg?branch=master)](https://travis-ci.org/octoblu/flow-util)
 
 
-# Install
+## Install
 ```
 npm install -g flow-util
 ```
 
-# Usage
+## Usage
 
 ```
 cat meshblu.json
@@ -35,14 +35,14 @@ Resume message passing inside the flow
 flow-util resume ./meshblu.json
 ```
 
-# Save
+## Save
 
 Save the current state of the flow
 ```
 flow-util save ./meshblu.json
 ```
 
-# Pause and Save
+## Pause and Save
 
 Halt message passing inside the flow and save current state
 ```
