@@ -7,7 +7,7 @@ class Command
       .version packageJSON.version
       .command 'pause',     'pause a flow'
       .command 'resume',    'resume a flow'
-      .command 'save',     'save flow state'
+      .command 'save',      'save flow state'
       .command 'savepause', 'pause and save flow state'
       .parse process.argv
 

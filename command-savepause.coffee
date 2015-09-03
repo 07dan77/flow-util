@@ -10,11 +10,14 @@ class CommandSavePause
   parseOptions: =>
     commander
       .usage '[options] [path/to/meshblu.json]'
+      .option '-t, --timeout [milliseconds]', 'request timeout for save commands', parseInt
       .description 'config parameters may optionally be provided by the environment'
       .parse process.argv
 
-    @filename = commander.args[0]
 
+    @filename = commander.args[0]
+    @timeout = commander.timeout ? process.env.FLOW_UTIL_TIMEOUT ? 20000
+    
   run: =>
     @parseOptions()
 
@@ -23,6 +26,7 @@ class CommandSavePause
 
     url = "#{FLOW_DEPLOY_SERVICE_BASE_URI}/flows/#{config.uuid}/instance/save-pause/#{uuid.v1()}"
     requestOptions =
+      timeout: @timeout
       json: true
       auth:
         user: config.uuid
